@@ -13,6 +13,7 @@ class MainMenu extends StatelessWidget {
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50,
@@ -38,45 +39,49 @@ class MainMenu extends StatelessWidget {
                   fontFamily: 'MPlus2',
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(6),
-                margin: EdgeInsets.symmetric(vertical: 13, horizontal: 30),
+              SizedBox(
+                height: 20,
+                width: 200,
+                child: Divider(
+                  color: Colors.white60,
+                )
+              ),
+              Card(
+                shadowColor: Colors.white60,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
                 color: Colors.white,
-                child: Row(children: <Widget>[
-                  Icon(
+                child: ListTile(
+                  leading:  Icon(
                     Icons.phone,
                     color: Colors.grey.shade900,
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text('8-800-555-35-35',
+                  title: Text('8-800-555-35-35',
                       style: TextStyle(
                           color: Colors.grey.shade900,
                           fontFamily: 'MPlus2',
                           fontWeight: FontWeight.bold,
                           fontSize: 15)),
-                ]),
+                )
               ),
-              Container(
-                padding: EdgeInsets.all(6),
+
+
+              Card(
+                shadowColor: Colors.white60,
                 margin: EdgeInsets.symmetric(vertical: 0, horizontal: 30),
                 color: Colors.white,
-                child: Row(children: <Widget>[
-                  Icon(
+                child: ListTile (
+                  leading:Icon(
                     Icons.mail,
                     color: Colors.grey.shade900,
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text('akmzzznra@gmail.com',
+                  title: Text('akmzzznra@gmail.com',
                       style: TextStyle(
                           color: Colors.grey.shade900,
                           fontFamily: 'MPlus2',
                           fontWeight: FontWeight.bold,
                           fontSize: 15)),
-                ]),
+
+                ),
               ),
             ],
           ),
